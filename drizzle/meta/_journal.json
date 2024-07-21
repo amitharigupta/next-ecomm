@@ -29,6 +29,27 @@
       "when": 1721539047385,
       "tag": "0003_pretty_malice",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1721540543627,
+      "tag": "0004_magenta_hex",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1721546082952,
+      "tag": "0005_salty_lucky_pierre",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1721546292196,
+      "tag": "0006_huge_dracula",
+      "breakpoints": true
     }
   ]
 }
