@@ -15,6 +15,13 @@
       "when": 1721481322128,
       "tag": "0001_round_gunslinger",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721537861662,
+      "tag": "0002_acoustic_anita_blake",
+      "breakpoints": true
     }
   ]
 }
