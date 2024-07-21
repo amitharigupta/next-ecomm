@@ -1,10 +1,13 @@
 import { db } from "@/lib/db/db";
 import { products } from "@/lib/db/schema";
 import { productSchema } from "@/lib/validators/productSchema";
+import { desc } from "drizzle-orm";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
+// Create a new product
 export async function POST(request: Request) {
+  // Todo: check user access
   const data = await request.formData();
   let validatedData;
 
@@ -38,3 +41,15 @@ export async function POST(request: Request) {
 
   return Response.json({ message: 'Product added successfully', data: { ...validatedData, image: fileName } }, { status: 201 });
 }
+
+// Get All Products
+export async function GET() {
+  try {
+    const allProducts = await db.select().from(products).orderBy(desc(products.id));
+
+    return Response.json({ status: 200, message: "All Products fetched successfully", data: allProducts }, { status: 200 });
+  } catch (err) {
+    return Response.json({ status: 500, message: 'Failed to fetch products' + err }, { status: 500 });
+  }
+}
+
