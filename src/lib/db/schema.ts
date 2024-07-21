@@ -29,11 +29,11 @@ export const products = pgTable("products", ({
 export const warehouses = pgTable("warehouses", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 100 }).notNull(),
-  pinCode: varchar("pinCode", { length: 6 }).notNull(),
+  pincode: varchar("pincode", { length: 6 }).notNull(),
   updatedAt: timestamp('updated_at').default(sql`CURRENT_TIMESTAMP`),
   createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
 }, (table) => {
   return {
-    pincodeIdx: index("pincode_idx").on(table.pinCode)
+    pincodeIdx: index("pincode_idx").on(table.pincode)
   }
 });

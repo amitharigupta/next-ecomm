@@ -22,6 +22,13 @@
       "when": 1721537861662,
       "tag": "0002_acoustic_anita_blake",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1721539047385,
+      "tag": "0003_pretty_malice",
+      "breakpoints": true
     }
   ]
 }
